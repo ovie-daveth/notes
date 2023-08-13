@@ -1,0 +1,39 @@
+.container{
+    min-height:100vh;
+}
+.editor{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+.title{
+    display:flex;
+    flex-direction:column;
+    gap:13px;
+}
+.title label{
+    font-size:22px;
+}
+.title input{
+    background:transparent;
+    border-radius:10px;
+    height:60px;
+    border:1px solid #eee;
+    outline:none;
+    color:white;
+    padding: 0 10px;
+}
+.container button{
+    background: transparent;
+    padding: 0.5rem 3rem;
+    margin-top: 2rem;
+    color:#eee;
+    font-weight: 700;
+    font-size:16px;
+    border: 1px solid #eee;
+    cursor:pointer;
+}
+
+.container button:hover{
+    background:rgb(235, 165, 74);
+}

@@ -1,0 +1,29 @@
+.notecont{
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.notecont:hover{
+    background-color: rgb(235, 165, 74);
+    color: #442727;
+}
+.notecont h1{
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 23px;
+}
+.notecont p{
+    line-height: 20px;
+}
+
+.span{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+}

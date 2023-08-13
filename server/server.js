@@ -1,11 +1,13 @@
 const express = require('express');
 const dotenv  = require('dotenv');
 const connectDB = require('./config/dbConfig.js');
+const cors = require("cors")
 
 const app = express();
 
 const PORT = process.env.PORT || 5001
 app.use(express.json());
+app.use(cors());
 
 connectDB()
 
@@ -19,7 +21,7 @@ app.get('/', (req,res)=>{
 
 
 
-app.listen(PORT, connect())
+app.listen(PORT, connect)
 
 function connect() {
     console.log(`server listening on ${PORT}`)

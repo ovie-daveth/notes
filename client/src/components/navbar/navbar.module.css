@@ -1,0 +1,28 @@
+.navbarcontainer{
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    font-size: 30px;
+}
+
+.navbar{
+    display: flex;
+    gap:20px;
+}
+.navbar button{
+    background: transparent;
+    color:#eee;
+    padding: 4px 10px;
+    font-weight: 800;
+    border:1px solid #eee;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.navbar button:hover{
+    color:rgb(235, 165, 74);
+    border-color: rgb(235, 165, 74);;
+}

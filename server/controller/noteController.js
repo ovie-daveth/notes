@@ -3,13 +3,17 @@ const Note = require("../model/noteModel")
 
 
 const createPost = asyncHandler(async (req, res) => {
-    const {title, notes} = req.body
+    const {title, content} = req.body
+    console.log(title, content) 
+    // const userId = req.user._id
     const newNote = await Note.create({
         title: title, 
-        notes: notes,
-        author: req.user.id,
+        notes: content,
+        author: req.user._id
     })
+    console.log(newNote)
     res.status(201).json({success: true, data: newNote})
+
 })
 
 const seePosts = asyncHandler(async (req, res) => {

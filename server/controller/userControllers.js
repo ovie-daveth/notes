@@ -5,6 +5,7 @@ const User = require("../model/userModel")
 const jwt = require("jsonwebtoken")
 const { response } = require("express")
 require("dotenv").config()
+const cookie = require("cookie")
 
 connection()
 
@@ -45,19 +46,20 @@ const loginUser =  asyncHandler(async (req, res) => {
         res.status(400)
         throw new Error("Invalid password")
     } else {
-        console.log("sure", user)
-
-        const token =  jwt.sign(
+        const token = jwt.sign(
             {
                 user: {
-                  username: user.username,
-                  email: user.email,
-                  id: user.id,
+                    username: user.username,
+                    email: user.email,
+                    id: user.id,
                 },
             },
-            process.env.TOKEN_SECRET, {expiresIn: "1d"})
-
-        return res.status(200).json({success: true, data: token})
+            process.env.TOKEN_SECRET,
+            { expiresIn: "1d" }
+        );
+        
+        return res.status(200).json({ success: true, data: token });
+        
     }
 })
 
